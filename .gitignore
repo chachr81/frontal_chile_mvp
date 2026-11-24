@@ -1,0 +1,9 @@
+# Entorno virtual y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Credenciales: NUNCA se versionan
+.env
+# Descargas crudas (trazabilidad local); los datos procesados sí se versionan
+data/raw/

@@ -1,0 +1,28 @@
+# Metadatos del paquete y configuración de herramientas (formato PEP 621).
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frontal-chile"
+version = "0.1.0"
+description = "MVP: visor mínimo público del impacto observado de sistemas frontales en Chile"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "seaborn>=0.13",
+    "matplotlib>=3.8",
+    "streamlit>=1.35",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+# Permite ejecutar las pruebas sin instalar el paquete.
+pythonpath = ["src"]
+testpaths = ["tests"]

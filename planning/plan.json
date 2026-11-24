@@ -1,0 +1,323 @@
+{
+  "nota": "Plan derivado de la Unidad 1 (backlog inicial) y la Unidad 2 (backlog v2.0, Sprint 1). Sin fechas: el equipo las fija en la planificación.",
+  "labels": [
+    {
+      "name": "historia",
+      "color": "1d76db"
+    },
+    {
+      "name": "tarea",
+      "color": "5319e7"
+    },
+    {
+      "name": "impedimento",
+      "color": "d93f0b"
+    },
+    {
+      "name": "mvp",
+      "color": "0e8a16"
+    },
+    {
+      "name": "prioridad:alta",
+      "color": "b60205"
+    },
+    {
+      "name": "prioridad:media",
+      "color": "fbca04"
+    },
+    {
+      "name": "prioridad:baja",
+      "color": "c2e0c6"
+    },
+    {
+      "name": "epica:E1",
+      "color": "ededed",
+      "description": "E1. Ranking regional del evento"
+    },
+    {
+      "name": "epica:E2",
+      "color": "ededed",
+      "description": "E2. Calidad y transparencia del dato"
+    },
+    {
+      "name": "epica:E3",
+      "color": "ededed",
+      "description": "E3. Contexto hidrológico y detalle regional"
+    },
+    {
+      "name": "epica:E4",
+      "color": "ededed",
+      "description": "E4. Apoyo geográfico"
+    },
+    {
+      "name": "epica:E5",
+      "color": "ededed",
+      "description": "E5. Variables complementarias"
+    }
+  ],
+  "milestones": [
+    {
+      "title": "Sprint 1",
+      "description": "HU-01 a HU-04 (13 puntos). Objetivo: identificar con datos observados qué región acumuló más precipitación en el último período con datos."
+    },
+    {
+      "title": "Sprint 2",
+      "description": "HU-05 a HU-07 (18 puntos)."
+    },
+    {
+      "title": "Sprint 3",
+      "description": "HU-08 a HU-10 (13 puntos)."
+    }
+  ],
+  "issues": [
+    {
+      "title": "HU-01 Ver un ranking de regiones por precipitación acumulada",
+      "milestone": "Sprint 1",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E1",
+        "mvp"
+      ],
+      "body": "**Como analista, quiero ver un ranking de regiones por precipitación acumulada para identificar la región más afectada.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-02 Que el período se calcule desde el último día con datos",
+      "milestone": "Sprint 1",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E1",
+        "mvp"
+      ],
+      "body": "**Como analista, quiero que el período se calcule desde el último día con datos para no ver información vieja.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-03 Ver la presión mínima por región",
+      "milestone": "Sprint 1",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E1",
+        "mvp"
+      ],
+      "body": "**Como analista, quiero ver la presión mínima por región para reconocer la firma de un frente.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-04 Un estado vacío explícito cuando una serie no tiene datos",
+      "milestone": "Sprint 1",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E2",
+        "mvp"
+      ],
+      "body": "**Como analista, quiero un estado vacío explícito cuando una serie no tiene datos para no interpretar mal un gráfico en blanco.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Alta\n- Estimación: 2 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-05 Ver caudal y nivel de ríos de la región",
+      "milestone": "Sprint 2",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E3",
+        "mvp"
+      ],
+      "body": "**Como analista, quiero ver caudal y nivel de ríos de la región para conectar la lluvia con su impacto.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-06 El detalle de una región con una pestaña por variable",
+      "milestone": "Sprint 2",
+      "labels": [
+        "historia",
+        "prioridad:alta",
+        "epica:E3"
+      ],
+      "body": "**Como analista, quiero el detalle de una región con una pestaña por variable para analizar cada fenómeno.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 8 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-07 Un mapa de apoyo pequeño que seleccione regiones",
+      "milestone": "Sprint 2",
+      "labels": [
+        "historia",
+        "prioridad:media",
+        "epica:E4"
+      ],
+      "body": "**Como analista, quiero un mapa de apoyo pequeño que seleccione regiones para ubicarme geográficamente.**\n\n- Épica: E4. Apoyo geográfico\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-08 La serie de una estación con agregación cruda, diaria, semanal o mensual",
+      "milestone": "Sprint 3",
+      "labels": [
+        "historia",
+        "prioridad:media",
+        "epica:E3"
+      ],
+      "body": "**Como analista, quiero la serie de una estación con agregación cruda, diaria, semanal o mensual para revisar su evolución.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-09 Un pop-up con los metadatos de la estación",
+      "milestone": "Sprint 3",
+      "labels": [
+        "historia",
+        "prioridad:media",
+        "epica:E2"
+      ],
+      "body": "**Como analista, quiero un pop-up con los metadatos de la estación para conocer su origen y cobertura.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Media\n- Estimación: 3 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "HU-10 Una rosa de vientos por región",
+      "milestone": "Sprint 3",
+      "labels": [
+        "historia",
+        "prioridad:baja",
+        "epica:E5"
+      ],
+      "body": "**Como analista, quiero una rosa de vientos por región para ver la dirección del viento en el pico del evento.**\n\n- Épica: E5. Variables complementarias\n- Prioridad: Baja\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+    },
+    {
+      "title": "[HU-01] Definir las regiones y la regla de agregación de la precipitación acumulada",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nHistoria relacionada: HU-01.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-01] Identificar las fuentes públicas de precipitación y documentar su licencia de uso",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 4 horas.\n\nHistoria relacionada: HU-01.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-01] Cargar y depurar los datos de precipitación de las estaciones",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 6 horas.\n\nHistoria relacionada: HU-01.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-01] Calcular la precipitación acumulada por región",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 4 horas.\n\nHistoria relacionada: HU-01.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-01] Construir la vista de ranking de regiones",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 5 horas.\n\nHistoria relacionada: HU-01.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-02] Definir la regla del último día con datos y la ventana del período",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 2 horas.\n\nHistoria relacionada: HU-02.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-02] Calcular el período de forma automática",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nHistoria relacionada: HU-02.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-02] Mostrar el período y la fuente de los datos en la vista",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 2 horas.\n\nHistoria relacionada: HU-02.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-03] Seleccionar las estaciones con presión y definir la presión mínima regional",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nHistoria relacionada: HU-03.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-03] Calcular y visualizar la presión mínima por región",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 4 horas.\n\nHistoria relacionada: HU-03.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-04] Definir los casos sin datos y redactar los mensajes al usuario",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 2 horas.\n\nHistoria relacionada: HU-04.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[HU-04] Implementar los estados vacío, de carga y de error",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nHistoria relacionada: HU-04.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[Transversal] Preparar y aplicar las sesiones de validación (Anexo A)",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 8 horas.\n\nTarea transversal al Sprint.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[Transversal] Revisar el código entre pares (definición de terminado, criterio 1)",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 4 horas.\n\nTarea transversal al Sprint.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[Transversal] Desplegar en un entorno de prueba y obtener la aceptación del Product Owner",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nTarea transversal al Sprint.\n\nResponsable: _asignar en la planificación del Sprint._"
+    },
+    {
+      "title": "[Transversal] Publicar el repositorio con README y licencia",
+      "milestone": "Sprint 1",
+      "labels": [
+        "tarea",
+        "mvp"
+      ],
+      "body": "Estimación: 3 horas.\n\nTarea transversal al Sprint.\n\nResponsable: _asignar en la planificación del Sprint._"
+    }
+  ]
+}
