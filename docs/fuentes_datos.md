@@ -27,8 +27,12 @@ Revisión realizada el 23-11-2026.
   User-Agent de navegador y se satura con ráfagas de solicitudes.
 - No se encontró una licencia explícita de reutilización.
 
-**No verificado**: formato exacto de las tablas y si su extracción automatizada está permitida.
-Por eso el MVP importa un CSV exportado por el equipo.
+**Verificado en la práctica (23-11-2026)**: la tabla sinóptica diaria de DGASAT se extrae sin credenciales
+(sesión con cookie, User-Agent de navegador, pacing entre solicitudes) con `scripts/collect.py dga-dgasat`.
+
+**No verificado**: si la extracción automatizada está permitida por los términos del portal (no se encontró
+una cláusula explícita) y la unidad exacta de cada contador. El importador de CSV (`dga-csv`) se mantiene
+como alternativa.
 
 ## Obligaciones para el visor
 
@@ -36,3 +40,23 @@ Por eso el MVP importa un CSV exportado por el equipo.
 - No publicar el token. `.env` está en `.gitignore`.
 - Mantener un ritmo de solicitudes bajo (una descarga diaria).
 - Confirmar con la DMC y la DGA las condiciones de reutilización antes de desplegar públicamente.
+
+
+# Piloto con datos reales: Región Metropolitana
+
+## Alcance del piloto
+Región Metropolitana de Santiago, periodo 2 de junio al 23 de noviembre de 2026 (el último día es parcial).
+Una sola región: el ranking entre regiones (HU-01) no se demuestra con este piloto; se muestra a nivel de estación.
+
+## Dirección General de Aguas (DGA)
+- Catálogo de estaciones: servidor MCP "Red de Monitoreo Chile" (`data/catalogo/dga_estaciones.json`, 53 estaciones vigentes de la región).
+- Series diarias: portal DGASAT (sinóptico diario), extraídas con `scripts/collect.py dga-dgasat`. El portal no requiere credenciales; exige User-Agent de navegador, sesión con cookie y pacing entre solicitudes.
+- Variables incorporadas: precipitación diaria, caudal medio diario, nivel medio diario.
+
+## Supuestos y limitaciones (a verificar)
+- Los datos son provisorios, no validados por la DGA.
+- Precipitación diaria = máximo diario del contador acumulado menos el del día anterior (solo días consecutivos); los negativos (reinicios del contador) se descartan.
+- Se descartan los códigos de dato faltante del portal (p. ej. -99999).
+- La presión atmosférica de la DGA es presión de estación, no reducida a nivel del mar, y las estaciones están a altitudes distintas; por eso no se incorpora (HU-03 queda pendiente de la DMC).
+- DMC (Dirección Meteorológica de Chile): requiere token personal; no se utilizó en este piloto.
+- Estaciones sin respuesta del portal o sin parámetros de interés quedan fuera; la bitácora de cobertura se guarda en `data/raw/dga_dgasat/` (no versionada).
