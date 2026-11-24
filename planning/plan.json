@@ -58,15 +58,15 @@
   "milestones": [
     {
       "title": "Sprint 1",
-      "description": "HU-01 a HU-04 (13 puntos). Objetivo: identificar con datos observados qué región acumuló más precipitación en el último período con datos."
+      "description": "HU-01 a HU-04, 13 puntos. 23 nov. 2026 al 29 nov. 2026. Objetivo: Permitir que un analista identifique, con datos observados de estaciones públicas, qué región acumuló más precipitación en el último período con datos, con estados vacío, de carga y de error explícitos."
     },
     {
       "title": "Sprint 2",
-      "description": "HU-05 a HU-07 (18 puntos)."
+      "description": "HU-05 a HU-07, 18 puntos. 30 nov. 2026 al 6 dic. 2026. Objetivo: Conectar la lluvia con su impacto hidrológico y permitir el análisis regional: caudal y nivel de ríos de la región, una pestaña de detalle por variable y un mapa de apoyo que seleccione regiones."
     },
     {
       "title": "Sprint 3",
-      "description": "HU-08 a HU-10 (13 puntos)."
+      "description": "HU-08 a HU-10, 13 puntos. 7 dic. 2026 al 9 dic. 2026. Objetivo: Habilitar la revisión de una estación y de variables complementarias: serie con agregación seleccionable, metadatos de la estación en un pop-up y rosa de vientos por región."
     }
   ],
   "issues": [
@@ -79,7 +79,7 @@
         "epica:E1",
         "mvp"
       ],
-      "body": "**Como analista, quiero ver un ranking de regiones por precipitación acumulada para identificar la región más afectada.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero ver un ranking de regiones por precipitación acumulada para identificar la región más afectada.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] La pantalla lista las regiones con datos de mayor a menor precipitación acumulada del período, con el valor medio, el máximo y el número de estaciones.\n- [ ] El valor regional es la media del acumulado de las estaciones de la región que tienen datos en al menos el 80 % de los días del período.\n- [ ] Una región sin estaciones con cobertura suficiente no aparece con 0 mm; si ninguna región cumple, se muestra el estado vacío.\n- [ ] Un usuario nombra la región que encabeza el ranking sin ayuda (tarea T1, hipótesis H1).\n\n**Verificación:** Pruebas automatizadas del cálculo (orden, cobertura, estaciones sin región) y sesión de validación.\n"
     },
     {
       "title": "HU-02 Que el período se calcule desde el último día con datos",
@@ -90,7 +90,7 @@
         "epica:E1",
         "mvp"
       ],
-      "body": "**Como analista, quiero que el período se calcule desde el último día con datos para no ver información vieja.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero que el período se calcule desde el último día con datos para no ver información vieja.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El período termina en el último día con al menos una observación de precipitación, no en la fecha de consulta.\n- [ ] La ventana es de 7 días por defecto y el usuario puede ajustarla entre 1 y 30 días.\n- [ ] La pantalla muestra las fechas de inicio y término del período y la fuente de los datos.\n- [ ] Un usuario indica correctamente el período mostrado (tarea T2, hipótesis H2).\n\n**Verificación:** Prueba automatizada del período y sesión de validación.\n"
     },
     {
       "title": "HU-03 Ver la presión mínima por región",
@@ -101,7 +101,7 @@
         "epica:E1",
         "mvp"
       ],
-      "body": "**Como analista, quiero ver la presión mínima por región para reconocer la firma de un frente.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero ver la presión mínima por región para reconocer la firma de un frente.**\n\n- Épica: E1. Ranking regional del evento\n- Prioridad: Alta\n- Estimación: 3 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El indicador entrega, por región, la presión mínima del período en hPa con la estación y el día en que se registró.\n- [ ] Las regiones se presentan desde la presión más baja y la vista indica que el valor es una observación de la estación, no un promedio.\n- [ ] Si no hay observaciones de presión en el período, se muestra el estado vacío y no un gráfico en blanco.\n- [ ] Un usuario relaciona el valor con un frente o con baja presión (tarea T3, hipótesis H3).\n\n**Verificación:** Prueba automatizada de la presión mínima y sesión de validación.\n"
     },
     {
       "title": "HU-04 Un estado vacío explícito cuando una serie no tiene datos",
@@ -112,7 +112,7 @@
         "epica:E2",
         "mvp"
       ],
-      "body": "**Como analista, quiero un estado vacío explícito cuando una serie no tiene datos para no interpretar mal un gráfico en blanco.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Alta\n- Estimación: 2 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero un estado vacío explícito cuando una serie no tiene datos para no interpretar mal un gráfico en blanco.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Alta\n- Estimación: 2 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] Cuando un indicador, una serie o una región no tiene datos, la pantalla muestra un mensaje que comienza con «Sin datos» y explica el motivo.\n- [ ] Una serie sin datos nunca se dibuja ni se informa como cero.\n- [ ] Durante la lectura se muestra un indicador de carga y, si el archivo no puede leerse, un mensaje de error sin que la aplicación se detenga.\n- [ ] Un usuario entiende que no hay datos y no que llovió cero (tarea T4, hipótesis H4).\n\n**Verificación:** Pruebas automatizadas de la aplicación (sin archivo, archivo corrupto) y sesión de validación.\n"
     },
     {
       "title": "HU-05 Ver caudal y nivel de ríos de la región",
@@ -123,7 +123,7 @@
         "epica:E3",
         "mvp"
       ],
-      "body": "**Como analista, quiero ver caudal y nivel de ríos de la región para conectar la lluvia con su impacto.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero ver caudal y nivel de ríos de la región para conectar la lluvia con su impacto.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 5 puntos de historia\n- En el MVP: sí\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El usuario elige una región y ve las series diarias de caudal (m³/s) y de nivel (m) de sus estaciones, en el mismo período del ranking.\n- [ ] Cada serie indica su estación y su fuente.\n- [ ] Si la región no tiene caudal ni nivel en el período, se informa que no hay datos y que ello no equivale a caudal cero.\n- [ ] Un usuario describe una relación con la lluvia o declara con razones que no puede inferirla (tarea T5, hipótesis H5).\n\n**Verificación:** Prueba automatizada de la serie hidrológica y sesión de validación.\n"
     },
     {
       "title": "HU-06 El detalle de una región con una pestaña por variable",
@@ -133,7 +133,7 @@
         "prioridad:alta",
         "epica:E3"
       ],
-      "body": "**Como analista, quiero el detalle de una región con una pestaña por variable para analizar cada fenómeno.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 8 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero el detalle de una región con una pestaña por variable para analizar cada fenómeno.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Alta\n- Estimación: 8 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] Al seleccionar una región se muestra una pestaña por cada variable con datos (precipitación, presión, caudal y nivel).\n- [ ] Las variables sin datos en la región se indican como sin datos y no se ocultan.\n- [ ] Todas las pestañas usan el período definido en HU-02.\n\n**Verificación:** Revisión del Product Owner en el entorno de prueba y sesión de validación.\n"
     },
     {
       "title": "HU-07 Un mapa de apoyo pequeño que seleccione regiones",
@@ -143,7 +143,7 @@
         "prioridad:media",
         "epica:E4"
       ],
-      "body": "**Como analista, quiero un mapa de apoyo pequeño que seleccione regiones para ubicarme geográficamente.**\n\n- Épica: E4. Apoyo geográfico\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero un mapa de apoyo pequeño que seleccione regiones para ubicarme geográficamente.**\n\n- Épica: E4. Apoyo geográfico\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El mapa muestra las 16 regiones y su selección actualiza la región consultada en el detalle.\n- [ ] El mapa es de apoyo (tamaño reducido) y la información queda disponible sin usarlo, también con teclado.\n- [ ] Se atribuyen las fuentes cartográficas utilizadas.\n\n**Verificación:** Revisión del Product Owner en el entorno de prueba y verificación de uso con teclado.\n"
     },
     {
       "title": "HU-08 La serie de una estación con agregación cruda, diaria, semanal o mensual",
@@ -153,7 +153,7 @@
         "prioridad:media",
         "epica:E3"
       ],
-      "body": "**Como analista, quiero la serie de una estación con agregación cruda, diaria, semanal o mensual para revisar su evolución.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero la serie de una estación con agregación cruda, diaria, semanal o mensual para revisar su evolución.**\n\n- Épica: E3. Contexto hidrológico y detalle regional\n- Prioridad: Media\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El usuario elige una estación y una agregación (cruda, diaria, semanal o mensual) y la serie se actualiza.\n- [ ] Al agregar, los períodos con cobertura inferior al 80 % se marcan como sin datos y no se completan con ceros.\n- [ ] La serie indica la variable, la unidad y la fuente.\n\n**Verificación:** Pruebas automatizadas de la agregación y revisión del Product Owner.\n"
     },
     {
       "title": "HU-09 Un pop-up con los metadatos de la estación",
@@ -163,7 +163,7 @@
         "prioridad:media",
         "epica:E2"
       ],
-      "body": "**Como analista, quiero un pop-up con los metadatos de la estación para conocer su origen y cobertura.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Media\n- Estimación: 3 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero un pop-up con los metadatos de la estación para conocer su origen y cobertura.**\n\n- Épica: E2. Calidad y transparencia del dato\n- Prioridad: Media\n- Estimación: 3 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] Al seleccionar una estación se muestra su código, nombre, fuente, coordenadas y cobertura de datos.\n- [ ] El pop-up se puede cerrar con teclado.\n- [ ] Los campos que la fuente no entrega se indican como no disponibles.\n\n**Verificación:** Revisión del Product Owner en el entorno de prueba.\n"
     },
     {
       "title": "HU-10 Una rosa de vientos por región",
@@ -173,7 +173,7 @@
         "prioridad:baja",
         "epica:E5"
       ],
-      "body": "**Como analista, quiero una rosa de vientos por región para ver la dirección del viento en el pico del evento.**\n\n- Épica: E5. Variables complementarias\n- Prioridad: Baja\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._"
+      "body": "**Como analista, quiero una rosa de vientos por región para ver la dirección del viento en el pico del evento.**\n\n- Épica: E5. Variables complementarias\n- Prioridad: Baja\n- Estimación: 5 puntos de historia\n- En el MVP: no\n\n**Feedback de validación:** _completar con el ID del hallazgo (F1, F2...) tras las sesiones._\n\n## Criterios de aceptación\n\n- [ ] El usuario ve, para la región elegida, la dirección del viento en el pico del evento.\n- [ ] La historia requiere incorporar una variable de viento al conjunto de datos, que hoy no existe.\n- [ ] Si la región no tiene datos de viento, se muestra el estado vacío.\n\n**Verificación:** Prueba automatizada de la rosa de vientos y revisión del Product Owner.\n"
     },
     {
       "title": "[HU-01] Definir las regiones y la regla de agregación de la precipitación acumulada",
